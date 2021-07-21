@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="header-logo">Transaksi</a>
+    </header>
+    <div class="container">
+        <div class="container-header">
+            <h1>Daftar Transaksi</h1>
+        </div>
+        <div class="index-table-wrapper"> 
+            <table class="main-table">
+                <tr class="table-head">
+                    <th class="id-column">Order Number</th>
+                    <th class="item-column">Order Status</th>
+                    <th class="qty-column">item</th>
+                    <th class="price-column">Item Name</th>
+                    <th class="price-column">qty</th>
+                    <th class="price-column">price</th>
+                </tr>
+            
+                <% items.forEach((item) => { %>
+                    <tr class="table-body">
+                            <td class="id-column"><%= item.orderNumber %></td>
+                            <td class="item-column"><%= item.orderStatus %></td>
+                            <td class="qty-column"><%= item.item %></td>
+                            <td class="price-column"><%= item.ItemName %></td>
+                            <td class="price-column"><%= item.qty %></td>
+                            <td class="price-column"><%= item.itemCost %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

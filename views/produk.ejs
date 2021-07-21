@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/send_url.js"></script>
+</head>
+<body>
+    <header>
+        <a href="/" class="header-logo">Produk</a>
+    </header>
+    <div class="container">
+        <div class="container-header">
+            <h1>Daftar Produk</h1>
+        </div>
+        <div class="index-table-wrapper">
+            <table class="main-table">
+                <tr class="table-head">
+                    <th class="item-column">Item</th>
+                    <th class="qty-column">qty</th>
+                    <th class="price-column">price</th>
+                </tr>
+            
+                <% produk.forEach((item) => { %>
+                    <tr class="table-body">
+                            <td class="item-column"><%= item.Item %></td>
+                            <td class="qty-column"><%= item.qty %></td>
+                            <td class="price-column"><%= item.price %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
